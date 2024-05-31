@@ -15,8 +15,10 @@
     <tr>
       <td>Assignment 1</td>
       <td>HTML/CSS</td>
-      <td><a href="https://github.com/devrajneupane/LFSWEF/Day1">Code</a></td>
-      <td><a href="./Day1/index.html">Host</a></td>
+      <!-- TODO: Really? -->
+      <td><a href="https://github.com/devrajneupane/LFSWEF/tree/main/Day1">Code</a></td>
+      <td><a href="https://devrajneupane.github.io/LFSWEF/Day1/index.html">Host</a></td>
     </tr>
   </table>
 </div>
+
