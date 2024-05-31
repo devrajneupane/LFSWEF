@@ -4,7 +4,7 @@
     <h3 align="center">Roll No: 7</h3>
 </div>
 
-<div align="center">
+<div align="center" style="margin-inline: auto; width: fit-content">
   <table>
     <tr>
         <th>Assignment Title</th>
@@ -21,4 +21,3 @@
     </tr>
   </table>
 </div>
-
