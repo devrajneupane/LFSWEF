@@ -15,21 +15,21 @@
     <tr>
       <td>Assignment 1</td>
       <td>HTML/CSS</td>
-      <!-- TODO: Really? -->
-      <td><a href="https://github.com/devrajneupane/LFSWEF/tree/main/Day1">Code</a></td>
-      <td><a href="https://devrajneupane.github.io/LFSWEF/Day1/index.html">Host</a></td>
+      <!-- TODO: There must be some way to provide relative links for folders and files within same repo -->
+      <td><a href="https://github.com/devrajneupane/LFSWEF/tree/main/Day1" target="_blank">Code</a></td>
+      <td><a href="https://devrajneupane.github.io/LFSWEF/Day1/index.html" target="_blank">Host</a></td>
     </tr>
     <tr>
       <td>Assignment 1 BEM</td>
       <td>HTML/CSS</td>
-      <td><a href="https://github.com/devrajneupane/LFSWEF/tree/bem/Day1">Code</a></td>
-      <td><a href="https://devrajneupane.github.io/LFSWEF/Day1/index.html">Host</a></td>
+      <td><a href="https://github.com/devrajneupane/LFSWEF/tree/bem/Day1" target="_blank">Code</a></td>
+      <td><a href="https://devrajneupane.github.io/LFSWEF/Day1/index.html" target="_blank">Host</a></td>
     </tr>
     <tr>
-      <td>Assignment 1 BEM</td>
+      <td>Assignment 2 Sky</td>
       <td>HTML/CSS</td>
-      <td><a href="https://github.com/devrajneupane/Final-Assignment-Sky">Code</a></td>
-      <td><a href="https://devrajneupane.github.io/Final-Assignment-Sky/">Host</a></td>
+      <td><a href="https://github.com/devrajneupane/Final-Assignment-Sky" target="_blank">Code</a></td>
+      <td><a href="https://devrajneupane.github.io/Final-Assignment-Sky/" target="_blank">Host</a></td>
     </tr>
   </table>
 </div>
