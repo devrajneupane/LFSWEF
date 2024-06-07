@@ -1,0 +1,63 @@
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  /* Side bar */
+  .profile > *:not(:last-child) {
+    width: 75%;
+  }
+
+
+  /* Projects */
+  .project-container {
+    flex-direction: row;
+  }
+
+  /* Experience */
+  .experience-card {
+    flex-direction: row;
+  }
+
+  .experience-card > .card-container {
+    flex-basis: 25%;
+  }
+
+  .experience-card > .description {
+    flex-basis: 75%;
+  }
+
+  /* Education */
+  .education-cards {
+    flex-direction: row;
+  }
+
+  /* Skills */
+  .skill-cards {
+    flex-direction: row;
+  }
+
+  /* Tools */
+
+  .tools {
+    width: 100%;
+  }
+
+  .tools-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .tool-name {
+    flex: 1;
+  }
+
+  .tool-name:nth-child(-1n + 4) {
+    flex-basis: calc(25% - 1rem);
+    width: 100%;
+  }
+}
