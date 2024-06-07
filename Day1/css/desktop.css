@@ -11,30 +11,30 @@
 
 
   /* Projects */
-  .project-container {
+  .project__cards {
     flex-direction: row;
   }
 
   /* Experience */
-  .experience-card {
+  .experience__card {
     flex-direction: row;
   }
 
-  .experience-card > .card-container {
+  .experience__card > .experience__card-container {
     flex-basis: 25%;
   }
 
-  .experience-card > .description {
+  .experience__card > .experience__card-desc {
     flex-basis: 75%;
   }
 
   /* Education */
-  .education-cards {
+  .education__cards {
     flex-direction: row;
   }
 
   /* Skills */
-  .skill-cards {
+  .skill__cards {
     flex-direction: row;
   }
 
@@ -44,7 +44,7 @@
     width: 100%;
   }
 
-  .tools-card {
+  .tools__card {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5em;
@@ -52,11 +52,11 @@
     align-items: center;
   }
 
-  .tool-name {
+  .tools__desc {
     flex: 1;
   }
 
-  .tool-name:nth-child(-1n + 4) {
+  .tools__desc:nth-child(-1n + 4) {
     flex-basis: calc(25% - 1rem);
     width: 100%;
   }
