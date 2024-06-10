@@ -1,3 +1,5 @@
+import { TOTAL_COLOR_COMBINATIONS } from "./constant.js";
+
 /**
  * Generates random number between min and max (inclusive) by exlcuding 0.
  *
@@ -19,8 +21,8 @@ function getRandomNumber(min = 0, max = 0) {
  * @returns {string} Hex color code
  */
 function getRandomColor() {
-  const colorCode = Math.floor(Math.random() * 16777215).toString(16);
-  return "#" + colorCode;
+  const colorCode = Math.floor(Math.random() * TOTAL_COLOR_COMBINATIONS);
+  return "#" + colorCode.toString(16);
 }
 
 /**
@@ -35,8 +37,7 @@ function getRandomColor() {
 function calculateDistance(x1, y1, x2, y2) {
   const dx = x2 - x1;
   const dy = y2 - y1;
-  // return Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
-  return Math.sqrt(dx*dx + dy*dy)
+  return Math.sqrt(dx * dx + dy * dy);
 }
 
 export { getRandomNumber, getRandomColor, calculateDistance };

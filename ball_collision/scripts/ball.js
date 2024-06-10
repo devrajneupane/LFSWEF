@@ -1,13 +1,13 @@
 import { getRandomNumber, getRandomColor, calculateDistance } from "./utils.js";
+import { SPEED } from "./constant.js";
 
 export default class Ball {
   /**
    * @param {number} x X cordinates of ball
    * @param {number} y Y cordinates of ball
    * @param {number} radius Radius of ball
-   * @param {number} speed Speed at which ball moves
    */
-  constructor(x, y, radius, speed) {
+  constructor(x, y, radius) {
     this.x = x;
     this.y = y;
     this.dx = getRandomNumber(-1, 1);
@@ -15,7 +15,7 @@ export default class Ball {
     this.color = getRandomColor();
     this.radius = radius;
     this.diameter = radius * 2;
-    this.speed = speed;
+    this.speed = SPEED;
 
     this.ball = document.createElement("div");
     this.ball.classList.add("ball");
@@ -24,16 +24,19 @@ export default class Ball {
     this.ball.style.background = this.color;
     this.ball.style.position = "absolute";
     this.ball.style.borderRadius = "50%";
+    this.ball.style.border = "solid 1px red";
   }
 
   /**
    * Move ball with given speed
    */
+  // moveBall = (delta) => {
   moveBall = () => {
+    // this.x += (this.dx * this.speed * delta) / 10;
+    // this.y += (this.dy * this.speed * delta) / 10;
     this.x += this.dx * this.speed;
     this.y += this.dy * this.speed;
-    this.ball.style.left = this.x + "px";
-    this.ball.style.top = this.y + "px";
+    this.ball.style.transform = `translate(${this.x}px, ${this.y}px)`;
   };
 
   /**
@@ -73,7 +76,7 @@ export default class Ball {
     const distance = calculateDistance(this.x, this.y, ball.x, ball.y);
     const sumOfRadii = this.radius + ball.radius;
 
-    if (distance <= sumOfRadii) {
+    if (distance < sumOfRadii) {
       // Calculate unit vector between two balls
       const nVecX = (ball.x - this.x) / distance;
       const nVecY = (ball.y - this.y) / distance;
