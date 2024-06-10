@@ -31,5 +31,11 @@
       <td><a href="https://github.com/devrajneupane/Final-Assignment-Sky" target="_blank">Code</a></td>
       <td><a href="https://devrajneupane.github.io/Final-Assignment-Sky/" target="_blank">Host</a></td>
     </tr>
+    <tr>
+      <td>Js Assignment 1 (Ball collision)</td>
+      <td>JS</td>
+      <td><a href="https://github.com/devrajneupane/LFSWEF/tree/main/ball_collision" target="_blank">Code</a></td>
+      <td><a href="https://devrajneupane.github.io/LFSWEF/ball_collision/index.html" target="_blank">Host</a></td>
+    </tr>
   </table>
 </div>
