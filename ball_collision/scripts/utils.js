@@ -1,4 +1,4 @@
-import { TOTAL_COLOR_COMBINATIONS } from "./constant.js";
+import { TOTAL_COLOR_COMBINATIONS } from "./constants.js";
 
 /**
  * Generates random number between min and max (inclusive) by exlcuding 0.

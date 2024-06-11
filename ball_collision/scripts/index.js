@@ -8,9 +8,9 @@ import {
   MAX_BALL_COUNT,
   BALLS_PER_CLICK,
   FPS,
-} from "./constant.js";
+} from "./constants.js";
 import { getRandomNumber } from "./utils.js";
-import Ball from "./ball.js";
+import Ball from "./Ball.js";
 
 /**
  * @type {Array.<Ball>} - Array of Ball objects
