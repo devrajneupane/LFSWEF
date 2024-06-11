@@ -1,5 +1,5 @@
 import { getRandomNumber, getRandomColor, calculateDistance } from "./utils.js";
-import { SPEED } from "./constant.js";
+import { SPEED } from "./constants.js";
 
 export default class Ball {
   /**
@@ -30,10 +30,7 @@ export default class Ball {
   /**
    * Move ball with given speed
    */
-  // moveBall = (delta) => {
   moveBall = () => {
-    // this.x += (this.dx * this.speed * delta) / 10;
-    // this.y += (this.dy * this.speed * delta) / 10;
     this.x += this.dx * this.speed;
     this.y += this.dy * this.speed;
     this.ball.style.transform = `translate(${this.x}px, ${this.y}px)`;

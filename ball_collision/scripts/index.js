@@ -1,6 +1,3 @@
-// TODO: right click to delete balls
-// TODO: click/keyboard handler to increase/decrase ball speed
-
 import {
   BALL_COUNT,
   BALL_MIN_RADIUS,
@@ -54,44 +51,43 @@ const infoElement = document.createElement("p");
 infoElement.innerHTML = "Click inside container to add more balls";
 document.body.append(infoElement);
 
-let lastTimeStamp = Date.now();
+const interval = 1000 / FPS; // Interval in milliseconds
+let lastTime = performance.now();
 
 function animate(currentTime) {
   const ballCount = balls.length;
+  let elapsed = currentTime - lastTime;
 
-  // Set framerate
-  let delta = currentTime - lastTimeStamp;
-  console.log(delta);
-  if (delta > 1000 / FPS) return;
-  lastTimeStamp = currentTime;
+  // If enough time has passed, update
+  if (elapsed >= interval) {
+    lastTime = currentTime - (elapsed % interval);
 
-  // NOTE: Not using forEach to reduce overhead for higher `ballCount`
-  for (let i = 0; i < ballCount; i++) {
-    const ball = balls[i];
-    ball.moveBall();
-    for (let j = i + 1; j < ballCount; j++) {
-      let otherBall = balls[j];
-      ball.checkBallCollision(otherBall);
+    // NOTE: Not using forEach to reduce overhead for higher `ballCount`
+    for (let i = 0; i < ballCount; i++) {
+      const ball = balls[i];
+      ball.moveBall();
+
+      for (let j = i + 1; j < ballCount; j++) {
+        let otherBall = balls[j];
+        ball.checkBallCollision(otherBall);
+      }
+
+      ball.checkWallCollision(
+        0,
+        0,
+        rect.right - rect.left,
+        rect.bottom - rect.top,
+      );
     }
-
-    ball.checkWallCollision(
-      0,
-      0,
-      rect.right - rect.left,
-      rect.bottom - rect.top,
-    );
   }
 
-  // requestAnimationFrame(animate);
-  setTimeout(animate, 1000 / 60);
+  requestAnimationFrame(animate);
 }
 
 animate();
 
 // Add more balls to the container on click event
-// FIX: New balls seem to overlap with each other until they collide with other ball
-container.addEventListener("click", (e) => {
-  console.log(e.x, e.y);
+container.addEventListener("click", (event) => {
   if (MAX_BALL_COUNT - BALLS_PER_CLICK < balls.length) {
     ballCountElement.innerHTML = `Total balls: ${balls.length} max ball count reach`;
     return;
@@ -99,10 +95,9 @@ container.addEventListener("click", (e) => {
 
   for (let i = 0; i < BALLS_PER_CLICK; i++) {
     const radius = getRandomNumber(BALL_MIN_RADIUS, BALL_MAX_RADIUS);
-    const x = e.x - rect.x + getRandomNumber(-30, 30);
-    const y = e.y - rect.y + getRandomNumber(-30, 30);
+    const x = event.x - rect.x + getRandomNumber(-30, 30);
+    const y = event.y - rect.y + getRandomNumber(-30, 30);
     const ball = new Ball(x, y, radius);
-    console.log(ball);
 
     ball.moveBall();
     container.appendChild(ball.getBallElement());

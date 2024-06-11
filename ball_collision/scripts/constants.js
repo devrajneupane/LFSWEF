@@ -38,7 +38,7 @@ export const TOTAL_COLOR_COMBINATIONS = 16777215;
  *
  * @type {number}
  */
-export const MAX_BALL_COUNT = 1000;
+export const MAX_BALL_COUNT = 500;
 
 /**
  * Number of balls added to container per click.
