@@ -37,5 +37,11 @@
       <td><a href="https://github.com/devrajneupane/LFSWEF/tree/main/ball_collision" target="_blank">Code</a></td>
       <td><a href="https://devrajneupane.github.io/LFSWEF/ball_collision/index.html" target="_blank">Host</a></td>
     </tr>
+    <tr>
+      <td>TS Assignment 1 (Image Carousel)</td>
+      <td>TS</td>
+      <td><a href="https://github.com/devrajneupane/LFSWEF/tree/main/image_carousel" target="_blank">Code</a></td>
+      <td><a href="https://devrajneupane.github.io/LFSWEF/image_carousel/index.html" target="_blank">Host</a></td>
+    </tr>
   </table>
 </div>
