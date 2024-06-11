@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div class="carousel-container">
+      <div class="navbtn">
+        <div class="leftbtn">
+          <svg
+            class="arrowbtn"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            version="1.1"
+            aria-hidden="false"
+          >
+            <desc lang="en-US">Chevron left</desc>
+            <path d="M15.5 18.5 14 20l-8-8 8-8 1.5 1.5L9 12l6.5 6.5Z"></path>
+          </svg>
+        </div>
+         <div class="tooltip-text">Prev</div>
+      </div>
+      <div class="carousel-frame">
+        <div class="carousel">
+          <div class="slide">
+            <img src="public/1.jpg" alt="Picture 1" />
+          </div>
+          <div class="slide">
+            <img src="public/2.jpg" alt="Picture 2" />
+          </div>
+          <div class="slide">
+            <img src="public/3.jpg" alt="Picture 3" />
+          </div>
+          <div class="slide">
+            <img src="public/4.jpg" alt="Picture 4" />
+          </div>
+          <div class="slide">
+            <img src="public/5.jpg" alt="Picture 5" />
+          </div>
+        </div>
+      </div>
+      <div class="navbtn">
+        <div class="rightbtn">
+          <svg
+            class="arrowbtn"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            version="1.1"
+            aria-hidden="false"
+          >
+            <desc lang="en-US">Chevron right</desc>
+            <path d="M8.5 5.5 10 4l8 8-8 8-1.5-1.5L15 12 8.5 5.5Z"></path>
+          </svg>
+        </div>
+         <div class="tooltip-text">Next</div>
+      </div>
+    </div>
+    <div class="indicators">
+      <div class="indicator active"></div>
+      <div class="indicator"></div>
+      <div class="indicator"></div>
+      <div class="indicator"></div>
+      <div class="indicator"></div>
+    </div>
+    <script type="module" src="./src/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  background-color: #13736e;
+}
+
+.carousel-container {
+  justify-content: center;
+  display: flex;
+  gap: 10px;
+}
+
+.navbtn {
+  width: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.arrowbtn {
+  fill: #f0f0f0;
+  cursor: pointer;
+}
+
+.carousel-frame {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+}
+
+.slide {
+  width: 600px;
+  height: 600px;
+  flex-shrink: 0;
+}
+
+.slide img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+.indicators {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: solid 2px #f0f0f0;
+}
+
+.active {
+  background: red;
+  border: solid 2px #f0f0f0;
+}
+
+ /* FIX: might fix this later */
+.tooltip-text {
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%; /* Show above the button */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbtn:hover .tooltip-text {
+  visibility: visible;
+}
+
+@media (min-width: 768px) {
+  .carousel-frame {
+    width: 600px;
+    height: 400px;
+  }
+}
