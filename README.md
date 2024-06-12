@@ -32,16 +32,16 @@
       <td><a href="https://devrajneupane.github.io/Final-Assignment-Sky/" target="_blank">Host</a></td>
     </tr>
     <tr>
-      <td>Js Assignment 1 (Ball collision)</td>
-      <td>JS</td>
+      <td>JavaScript Assignment 1 (Ball collision)</td>
+      <td>JavaScript</td>
       <td><a href="https://github.com/devrajneupane/LFSWEF/tree/main/ball_collision" target="_blank">Code</a></td>
       <td><a href="https://devrajneupane.github.io/LFSWEF/ball_collision/index.html" target="_blank">Host</a></td>
     </tr>
     <tr>
-      <td>TS Assignment 1 (Image Carousel)</td>
-      <td>TS</td>
-      <td><a href="https://github.com/devrajneupane/LFSWEF/tree/main/image_carousel" target="_blank">Code</a></td>
-      <td><a href="https://devrajneupane.github.io/LFSWEF/image_carousel/index.html" target="_blank">Host</a></td>
+      <td>TypeScript Assignment 2 (Car Lane Game)</td>
+      <td>TypeScript</td>
+      <td><a href="https://github.com/devrajneupane/Car-Lane-Game" target="_blank">Code</a></td>
+      <td><a href="https://devrajneupane.github.io/Car-Lane-Game" target="_blank">Host</a></td>
     </tr>
   </table>
 </div>
