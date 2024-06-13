@@ -1,86 +1,54 @@
-const carousel = document.getElementsByClassName("carousel")[0];
-const leftButton = document.getElementsByClassName("leftbtn")[0];
-const rightButton = document.getElementsByClassName(
-  "rightbtn",
-)[0] as HTMLButtonElement;
-const indicators = document.getElementsByClassName("indicator");
+const carousel = document.querySelector(".carousel") as HTMLElement;
+const leftButton = document.getElementById("leftbtn") as HTMLButtonElement;
+const rightButton = document.getElementById("rightbtn") as HTMLButtonElement;
+const imgLists = document.querySelectorAll(".slide") as NodeListOf<HTMLElement>;
+const indicators = document.querySelectorAll(
+  ".indicators div",
+) as NodeListOf<HTMLElement>;
 
-const span = 600;
-let prev = 0;
 let currentIndex = 0;
+const totalImages = imgLists.length - 1;
 
-/**
- * Removes the active class from indicator
- */
-const clearActive = () => {
-  for (let i = 0; i < indicators.length; i++) {
-    indicators[i].classList.remove("active");
-  }
-};
+// Move to next image after given interval
+let interval: number = setInterval(() => rightButton?.click(), 3000);
 
-/**
- * Moves between images with animation
- */
-const executeMove = (index: number) => {
-  let mov = index * span;
-  carousel.animate(
-    [
-      { transform: "translateX(-" + prev + "px)" },
-      { transform: "translateX(-" + mov + "px)" },
-    ],
-    { duration: 500 },
-  );
-  // @ts-ignore
-  carousel.style.transform = "translateX(-" + mov + "px)";
-  prev = mov;
-};
+// Move between images
+function executeMove() {
+  carousel.style.left = -imgLists[currentIndex].offsetLeft + "px";
 
-/**
- * Moves between images in given direction
- */
-const moveSlide = (dir: string) => {
-  if (dir === "left") {
-    currentIndex--;
-  } else {
-    currentIndex++;
-  }
-  if (currentIndex < 0) {
-    currentIndex = indicators.length - 1;
-  }
-  if (currentIndex > indicators.length - 1) {
-    currentIndex = 0;
-  }
-
-  executeMove(currentIndex);
-
+  let lastActive = document.querySelector("div.active") as HTMLDivElement;
+  lastActive?.classList.remove("active");
   indicators[currentIndex].classList.add("active");
-  clearInterval(interval);
-  interval = setInterval(() => {
-    rightButton?.click();
-  }, 3000);
-};
 
-/**
- * Add Event listeners to indicators
- */
-for (let i = 0; i < indicators.length; i++) {
-  indicators[i].addEventListener("click", () => {
-    clearActive();
-    executeMove(i);
-    indicators[i].classList.add("active");
-  });
+  // Reset interval
+  clearInterval(interval);
+  interval = setInterval(() => rightButton?.click(), 3000);
 }
 
-leftButton.addEventListener("click", () => {
-  clearActive();
-  moveSlide("left");
+// Go to next image on clicking right button
+rightButton?.addEventListener("click", () => {
+  if (currentIndex < totalImages) {
+    currentIndex++;
+  } else {
+    currentIndex = 0;
+  }
+  executeMove();
 });
 
-let interval: number = setInterval(() => {
-  rightButton?.click();
-}, 3000);
+// Go to next image on clicking left button
+leftButton?.addEventListener("click", () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+  } else {
+    currentIndex = totalImages;
+  }
+  executeMove();
+});
 
-rightButton.addEventListener("click", () => {
-  clearActive();
-  moveSlide("right");
+// Add Event listeners to indicators
+indicators.forEach((element: HTMLElement, index: number) => {
+  element.addEventListener("click", () => {
+    currentIndex = index;
+    executeMove();
+  });
 });
