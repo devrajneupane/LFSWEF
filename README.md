@@ -38,10 +38,22 @@
       <td><a href="https://devrajneupane.github.io/LFSWEF/ball_collision/index.html" target="_blank">Host</a></td>
     </tr>
     <tr>
+      <td>TypeScript Assignment 1 (Image Carousel)</td>
+      <td>TypeScript</td>
+      <td><a href="https://github.com/devrajneupane/LFSWEF/tree/main/image_carousel" target="_blank">Code</a></td>
+      <td><a href="https://devrajneupane.github.io/LFSWEF/image_carousel/index.html" target="_blank">Host</a></td>
+    </tr>
+    <tr>
       <td>TypeScript Assignment 2 (Car Lane Game)</td>
       <td>TypeScript</td>
       <td><a href="https://github.com/devrajneupane/Car-Lane-Game" target="_blank">Code</a></td>
       <td><a href="https://devrajneupane.github.io/Car-Lane-Game" target="_blank">Host</a></td>
+    </tr>
+    <tr>
+      <td>TypeScript Assignment 3 (Doodle Jump)</td>
+      <td>TypeScript</td>
+      <td><a href="https://github.com/devrajneupane/Doodle-Jump-Game" target="_blank">Code</a></td>
+      <td><a href="https://devrajneupane.github.io/Doodle-Jump-Game/" target="_blank">Host</a></td>
     </tr>
   </table>
 </div>
