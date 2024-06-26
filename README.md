@@ -55,5 +55,11 @@
       <td><a href="https://github.com/devrajneupane/Doodle-Jump-Game" target="_blank">Code</a></td>
       <td><a href="https://devrajneupane.github.io/Doodle-Jump-Game/" target="_blank">Host</a></td>
     </tr>
+    <tr>
+      <td>Minor Project - Bomberman</td>
+      <td>TypeScript</td>
+      <td><a href="https://github.com/devrajneupane/Bomberman" target="_blank">Code</a></td>
+      <td><a href="https://devrajneupane.github.io/Bomberman/" target="_blank">Host</a></td>
+    </tr>
   </table>
 </div>
