@@ -73,5 +73,11 @@
       <td><a href="https://github.com/devrajneupane/LF_Database/tree/main/day2" target="_blank">Code</a></td>
       <td>N/A</td>
     </tr>
+    <tr>
+      <td>Database Assignment 3</td>
+      <td>PostgreSQL</td>
+      <td><a href="https://github.com/devrajneupane/LF_Database/tree/main/day3" target="_blank">Code</a></td>
+      <td>N/A</td>
+    </tr>
   </table>
 </div>
