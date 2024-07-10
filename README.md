@@ -85,5 +85,17 @@
       <td><a href="https://github.com/devrajneupane/LF_Database/tree/main/day4" target="_blank">Code</a></td>
       <td>N/A</td>
     </tr>
+    <tr>
+      <td>Node JS Assignment 1</td>
+      <td>NodeJs</td>
+      <td><a href="https://github.com/devrajneupane/ToDo-App/tree/assignment/day_1" target="_blank">Code</a></td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>Node JS Assignment 2</td>
+      <td>NodeJs</td>
+      <td><a href="https://github.com/devrajneupane/ToDo-App/tree/assignment/day_2" target="_blank">Code</a></td>
+      <td>N/A</td>
+    </tr>
   </table>
 </div>
